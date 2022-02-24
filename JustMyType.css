@@ -11,9 +11,9 @@
 
 #yellow-block {
   position: absolute;
-  margin-top: 10px;
+  margin-top: 16px;
   width: 15px;
-  height: 15px;
+  height: 22px;
   background-color: yellow;
 }
 
