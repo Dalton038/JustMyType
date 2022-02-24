@@ -13,7 +13,7 @@ let $mistakes = 0;
 let $isTimeCounting = false;
 let $startDate;
 let $startTime;
-let $NumberOfWords = 54
+let $NumberOfWords = 102
 
 $($playButton).click(function () {
     $($content).css("display", "block");
@@ -72,7 +72,7 @@ $(document).keypress(function (e) {
                 let $endTime = $endDate.getTime();
                 let $minutes = ($endTime - $startTime) / 60000;
 
-                $wpm = Math.round($NumberOfWords / $minutes - 2 * $mistakes);
+                $wpm = Math.round($NumberOfWords / $minutes - 2 * $mistakes); 
 
                 let r = confirm("You type " + $wpm + " words per minute. Would you like to try again?");
 
