@@ -4,7 +4,7 @@ let $highlight = $("#yellow-block");
 let $highlightPosition = 0;
 let $keyUpper = $("#keyboard-upper-container");
 let $keyLower = $("#keyboard-lower-container");
-let $sentences = ['Sally sells sea shells by the sea shore', 'How much could a wood chuck chuck if a wood chuck could chuck wood'];
+let $sentences = ['ten ate neite ate nee enet ite ate inet ent eate', 'Too ato too nOt enot one totA not anot tOO aNot', 'oat itain oat tain nate eate tea anne inant nean', 'itant eate anot eat nato inate eat anot tain eat', 'nee ene ate ite tent tiet ent ine ene ete ene ate'];
 let $sentenceNumber = 0;
 let $sentence = $sentences[$sentenceNumber];
 let $charNumber = 0;
@@ -13,6 +13,7 @@ let $mistakes = 0;
 let $isTimeCounting = false;
 let $startDate;
 let $startTime;
+let $NumberOfWords = 54
 
 $($playButton).click(function () {
     $($content).css("display", "block");
@@ -71,7 +72,7 @@ $(document).keypress(function (e) {
                 let $endTime = $endDate.getTime();
                 let $minutes = ($endTime - $startTime) / 60000;
 
-                $wpm = Math.round(22 / $minutes - 2 * $mistakes);
+                $wpm = Math.round($NumberOfWords / $minutes - 2 * $mistakes);
 
                 let r = confirm("You type " + $wpm + " words per minute. Would you like to try again?");
 
